@@ -1,0 +1,47 @@
+.selectMenu {
+  display: inline-block;
+}
+.selectMenu__wrap {
+  position: relative;
+}
+.selectMenu__item,
+.selectMenu__header {
+  cursor: pointer;
+}
+.selectMenu__header._otherInput {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.selectMenu__currentValue {
+  pointer-events: none;
+}
+.selectMenu__list {
+  width: 100%;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  /* transform: translateY(-100%); */
+  transition: all 0.1s linear;
+}
+.selectMenu__list.open {
+  /* transform: translateY(0%); */
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.selectMenu__listWrap {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+.selectMenu__item.item_hide {
+  visibility: hidden;
+  position: absolute;
+}
+.selectGroupHide {
+  visibility: hidden;
+  position: absolute;
+}
